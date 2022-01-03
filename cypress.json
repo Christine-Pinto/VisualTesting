@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://testguild.com/",
+  "viewportWidth": 1200,
+  "chromeWebSecurity": false,
+  "modifyObstructiveCode": false,
+  "video": true,
+  "watchForFileChanges": false,
+  "numTestsKeptInMemory": 5,
+  "defaultCommandTimeout": 60000,
+  "requestTimeout": 60000,
+  "eyesTimeout": 60000,
+  "pageLoadTimeout": 180000,
+  "scrollBehavior": "center",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Cypress Hacked!",
+  "version": "1.0.0",
+  "description": "Repository for my Talk Cypress Hacked! at the Automation Guild 2022",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run --browser chrome --headless",
+    "report:merge": "mochawesome-merge 'cypress/results/json/*.json' > cypress/results/mochawesome-bundle.json",
+    "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html",
+    "report:copyScreenshots": "cp -r cypress/screenshots cypress/reports/html/screenshots",
+    "report:all": "yarn report:merge && yarn report:generate && yarn report:copyScreenshots",
+    "pre:run": "rm -rf cypress/screenshots cypress/results cypress/reports cypress/videos"
+  },
+  "devDependencies": {
+    "@applitools/eyes-cypress": "^3.23.2",
+    "chrome-remote-interface": "^0.31.0",
+    "cypress": "9.2.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-pipe": "^2.0.0",
+    "cypress-real-events": "^1.6.0",
+    "cypress-terminal-report": "^3.3.4",
+    "cypress-wait-until": "^1.7.1",
+    "dayjs": "^1.10.7",
+    "faker": "^5.5.3",
+    "mocha": "^8.4.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisPint/VisualTesting.git"
+  },
+  "keywords": [
+    "cypress;applitools;visualtesting"
+  ],
+  "author": "Christine Pinto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisPint/VisualTesting/issues"
+  },
+  "homepage": "https://github.com/ChrisPint/VisualTesting#readme"
+}

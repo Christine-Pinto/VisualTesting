@@ -1,0 +1,10 @@
+#
+node_modules
+npm-debug.log
+.env
+.DS_Store
+cypress/screenshots
+cypress/results
+cypress/reports
+cypress/videos
+cypress-logs
